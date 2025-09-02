@@ -5,7 +5,7 @@ This project showcases a luxury hotel with sections for rooms, amenities, galler
 
 ---
 
-# ✨ Features
+## ✨ Features
 
 - Responsive header with navigation bar and dropdown menu
 - Auto-sliding **image carousel** using Bootstrap
@@ -19,7 +19,7 @@ This project showcases a luxury hotel with sections for rooms, amenities, galler
 
 ---
 
-# 🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 - **HTML5**
 - **CSS3**
@@ -30,12 +30,14 @@ This project showcases a luxury hotel with sections for rooms, amenities, galler
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
+```plaintext
 Hotel-Kings/
-│── assets/
-│ └── images/ # Project images (logo, rooms, gallery, etc.)
-│── css/ # Stylesheets for each section
-│── js/ # JavaScript files (gallery, footer, etc.)
-│── index.html # Main HTML file
-│── README.md # Project documentation
+├── 📁 assets/
+│   └── 📁 images/
+├── 📁 css/
+├── 📁 js/
+├── 📄 index.html
+└── 📄 README.md
+```

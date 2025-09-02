@@ -1,0 +1,88 @@
+
+        /* General Section */
+        #room-section {
+            font-family: 'Georgia', serif;
+            padding: 60px 5%;
+            color: black;
+        }
+
+        .divider {
+            border-top: 1px solid #444;
+            margin: 15px 0 20px;
+        }
+
+        /* Row Layout */
+        .room-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        .room-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Room Image */
+        .room-img {
+            margin-top: 30vh;
+            flex: 1 1 45%;
+        }
+
+        .room-img img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Room Text */
+        .room-text {
+            margin-top: 20vh;
+            flex: 1 1 50%;
+        }
+
+        .room-text h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .room-text p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Features */
+        .room-features h3 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .room-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .room-features ul li {
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .room-features ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b6b4d;
+            font-size: 1.2rem;
+        }
+
+
+        #two-queen-junior-suite-ada {
+            margin-bottom: 0vh;
+            padding-bottom: 0vh;
+        }
+
+

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Kings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="icon" href="assets/images/kings-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/our-story-section.css">
+    <link rel="stylesheet" href="css/carousel-section.css">
+    <link rel="stylesheet" href="css/amenities-section.css">
+    <link rel="stylesheet" href="css/gallery-section.css">
+    <link rel="stylesheet" href="css/room-section.css">
+    <link rel="stylesheet" href="css/experience-section.css">
+    <link rel="stylesheet" href="css/responsive-design.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #d0b897;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ------------------------------ Header --------------------------->
+    <header>
+        <a id="home" href="#">
+            <div id="logo-container">
+                <img id="logo" src="assets/images/kings-logo.png" alt="logo" />
+                <h1>The Hotel Kings</h1>
+            </div>
+        </a>
+
+        <!-- Navbar -->
+        <nav id="navbar-header" class="navbar-class">
+            <ul id="navbar-menu">
+                <!-- Rooms Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false">Rooms</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#standard-king">Standard King</a></li>
+                        <li><a class="dropdown-item" href="#deluxe-king">Deluxe King</a></li>
+                        <li><a class="dropdown-item" href="#deluxe-king-ada">Deluxe King ADA</a></li>
+                        <li><a class="dropdown-item" href="#two-double">Two Double</a></li>
+                        <li><a class="dropdown-item" href="#two-queen-junior-suite">Two Queen Junior Suite</a></li>
+                        <li><a class="dropdown-item" href="#two-queen-junior-suite-ada">Two Queen Junior Suite ADA</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#our-story">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Location</a></li> -->
+                <li>
+                    <a id="reserve-btn" href="#">Reserve</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+        <!-- ------------------ Side Header (For Responsiveness) ------------------>
+        <i class="fa-solid fa-bars" id="burger"></i>
+
+        <nav id="sidebar-header" class="navbar-class">
+            <ul id="sidebar-menu">
+                <button id="closebtn">&times;</button>
+                <!-- Rooms Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false">Rooms</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#standard-king">Standard King</a></li>
+                        <li><a class="dropdown-item" href="#deluxe-king">Deluxe King</a></li>
+                        <li><a class="dropdown-item" href="#deluxe-king-ada">Deluxe King ADA</a></li>
+                        <li><a class="dropdown-item" href="#two-double">Two Double</a></li>
+                        <li><a class="dropdown-item" href="#two-queen-junior-suite">Two Queen Junior Suite</a></li>
+                        <li><a class="dropdown-item" href="#two-queen-junior-suite-ada">Two Queen Junior Suite ADA</a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#our-story">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Location</a></li> -->
+                <li>
+                    <a id="reserve-btn" href="#">Reserve</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!----------------------------- Main ----------------------------->
+    <main>
+
+        <!------------------ Carousel Section ------------------------->
+        <section id="carousel-section">
+            <div id="carousel-hotel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="3000">
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/hotel-img1.jpg" class="d-block w-100" alt="Hotel Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hotel-img2.jpg" class="d-block w-100" alt="Hotel Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hotel-img3.jpg" class="d-block w-100" alt="Hotel Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hotel-img4.jpg" class="d-block w-100" alt="Hotel Image 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/hotel-img5.jpg" class="d-block w-100" alt="Hotel Image 5">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-hotel"
+                    data-bs-slide="prev" aria-label="Previous Slide">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-hotel"
+                    data-bs-slide="next" aria-label="Next Slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+
+
+        <!-------------------------- Our Story Section ----------------------->
+        <section id="our-story">
+            <!-- Left Side -->
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <hr>
+                <p>
+                    The Kings Hotel embodies the essence of kingship, reflecting the deep-rooted values
+                    of community and togetherness across all cultures. Situated in the vibrant heart
+                    of Koreatown, Los Angeles, the Kings Hotel serves as a bridge between the rich
+                    traditions of its heritage and the experiences of its guests.
+                </p>
+                <p>
+                    By embracing the significance of community and home, the Kings Hotel offers a guest
+                    experience where visitors feel connected, welcomed, and comfortable, creating a
+                    home away from home for all.
+                </p>
+
+                <ul class="story-features">
+                    <li>On-Site Dining</li>
+                    <li>High-Speed Complimentary Wi-Fi</li>
+                    <li>Access To 24/7 Fitness Center</li>
+                    <li>24-Hour Business Center</li>
+                    <li>Event Room Available</li>
+                    <li>
+                        <a id="gallery-shortcut" href="#photo-gallery">View Gallery 📷</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Side -->
+            <div class="story-image-gallery">
+                <img src="assets/images/ouy-story1.png" alt="Lobby with flowers" class="main">
+                <img class="decor" src="assets/images/story-image2.png" alt="Decor 1">
+                <img class="decor" src="assets/images/story-image3.png" alt="Decor 2">
+            </div>
+        </section>
+
+
+        <!------------------------ Photo Gallery Section ------------------------->
+        <section id="photo-gallery">
+            <div class="photo-container">
+                <h2 class="gallery-header">Our Gallery</h2>
+                <hr id="gallery-hr">
+
+                <!-- Single Image Display -->
+                <div class="gallery-display">
+                    <img id="active-photo" src="assets/images/hotel-img1.jpg" class="gallery-image" alt="Gallery Image">
+
+                    <!-- Prev/Next Buttons -->
+                    <button class="gallery-nav-btn gallery-prev" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="gallery-nav-btn gallery-next" onclick="changeImage(1)">&#10095;</button>
+                </div>
+
+                <!-- Pagination -->
+                <nav>
+                    <ul class="gallery-pagination">
+                        <li class="page-item active"><a class="page-link" href="#active-photo"
+                                onclick="switchGallery(1)">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(2)">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(3)">3</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(4)">4</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(5)">5</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(6)">6</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
+
+        <!--------------------------- Amenities Section ------------------------->
+        <section id="amenities-section">
+            <div class="row align-items-center">
+                <!-- Left: Image -->
+                <div class="amenities-img">
+                    <img src="assets/images/hotel-img2.jpg" alt="Room Image" class="img-fluid">
+                    <img src="assets/images/hotel-img1.jpg" alt="Room Image" class="img-fluid">
+                </div>
+
+                <!-- Right: Text & Features -->
+                <div class="amenities-text">
+                    <h2>Rooms & Amenities</h2>
+                    <div class="divider"></div>
+                    <p>
+                        The Kings Hotel features 52 non-smoking rooms and suites, each designed to evoke a sense of
+                        coziness
+                        and warmth. The soothing wooden accents and natural wood tones create an inviting atmosphere,
+                        while
+                        luxurious golden details and striking black and white contrasts elevate the aesthetic.
+                    </p>
+
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>High-Speed Complimentary Wi-Fi</li>
+                            <li>Large 50” Flat Screen TV</li>
+                            <li>In-Room Coffee and Tea</li>
+                            <li>Complimentary Water Bottles and Ice Bucket</li>
+                            <li>Beekman 1802 Bath Amenities</li>
+                            <li>Luxury Bedding</li>
+                            <li>Plush Towels</li>
+                            <li>Dual Rain Shower and Hand Shower</li>
+                            <li>Quartz Bathroom Vanities</li>
+                            <li>Individual Climate Control</li>
+                            <li>Hair Dryer</li>
+                            <li>In-Room Safe</li>
+                            <li>Alarm Clock Radio</li>
+                            <li>Working Desk</li>
+                            <li>Mini-Fridge (Some Rooms, Provided Upon Request)</li>
+                            <li>Convenient Bedside Power Outlets</li>
+                            <li>Complimentary Nationwide Calls</li>
+                            <li>Energy Saving Key Card Switch</li>
+                            <li>Wake-Up Calls Upon Request</li>
+                            <li>Indoor Slippers Upon Request</li>
+                            <li>Non-Smoking</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Guests can choose from a variety of room categories, each offering modern amenities to ensure
+                        comfort and convenience. Plush bedding, spacious layouts, and thoughtfully curated décor provide
+                        the
+                        perfect retreat after a day of exploring. Large windows invite natural light, enhancing the
+                        calming
+                        ambiance, while subtle touches of elegance reflect the hotels dedication to timeless
+                        sophistication.
+
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- -------------------------- Room Section ---------------------------->
+        <section id="room-section">
+
+            <!-- ------------------------ Standard King ------------------------->
+            <div class="room-row" id="standard-king">
+                <div class="room-img">
+                    <img src="assets/images/room-1.jpg" alt="Standard King Room" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Standard King</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Our Standard King rooms are designed with warm wooden accents and luxurious golden details,
+                        offering a cozy yet stylish retreat. Perfect for solo travelers or couples.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>High-Speed Complimentary Wi-Fi</li>
+                            <li>50” Flat Screen TV</li>
+                            <li>In-Room Coffee and Tea</li>
+                            <li>Complimentary Water Bottles</li>
+                            <li>Luxury Bedding with Plush Towels</li>
+                            <li>Beekman 1802 Bath Amenities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------- Deluxe King ------------------------------->
+            <div class="room-row reverse" id="deluxe-king">
+                <div class="room-img">
+                    <img src="assets/images/room-2.jpg" alt="Deluxe King Room" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Deluxe King</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Spacious and elegant, the Deluxe King offers upgraded amenities and stunning city views.
+                        Ideal for business travelers or couples seeking extra comfort.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>All Standard King Features</li>
+                            <li>Mini-Fridge (on request)</li>
+                            <li>Working Desk with Lamp</li>
+                            <li>Rain Shower & Hand Shower</li>
+                            <li>Quartz Bathroom Vanities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------- Deluxe King ADA ------------------------->
+            <div class="room-row" id="deluxe-king-ada">
+                <div class="room-img">
+                    <img src="assets/images/room-3.jpg" alt="Deluxe King ADA Room" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Deluxe King ADA</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Designed with accessibility in mind, the Deluxe King ADA ensures a comfortable stay for all
+                        guests,
+                        with spacious layouts and ADA-compliant features.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>All Deluxe King Features</li>
+                            <li>Accessible Bathroom with Grab Bars</li>
+                            <li>Lowered Closet Rods & Light Switches</li>
+                            <li>Wheelchair-Friendly Layout</li>
+                            <li>Visual Fire Alarms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------- Two Double ------------------------>
+            <div class="room-row reverse" id="two-double">
+                <div class="room-img">
+                    <img src="assets/images/room-4.jpg" alt="Two Double Room" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Two Double</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Ideal for families or groups, our Two Double rooms offer extra sleeping space without
+                        compromising comfort and style.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>Two Double Beds with Premium Linens</li>
+                            <li>50” Flat Screen TV</li>
+                            <li>Complimentary Coffee & Tea</li>
+                            <li>Convenient Bedside Power Outlets</li>
+                            <li>Individual Climate Control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------- Two Queen Junior Suite -------------------->
+            <div class="room-row" id="two-queen-junior-suite">
+                <div class="room-img">
+                    <img src="assets/images/room-5.jpg" alt="Two Queen Junior Suite" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Two Queen Junior Suite</h2>
+                    <div class="divider"></div>
+                    <p>
+                        A perfect blend of space and luxury, the Two Queen Junior Suite offers separate seating areas
+                        and upgraded amenities, perfect for longer stays.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>Two Queen Beds</li>
+                            <li>Living Area with Sofa</li>
+                            <li>Complimentary Bottled Water & Ice Bucket</li>
+                            <li>Mini-Fridge & Coffee Maker</li>
+                            <li>Luxury Bedding & Plush Towels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------- Two Queen Junior Suite ADA ------------------->
+            <div class="room-row reverse" id="two-queen-junior-suite-ada">
+                <div class="room-img">
+                    <img src="assets/images/room-6.jpg" alt="Two Queen Junior Suite ADA" class="img-fluid">
+                </div>
+                <div class="room-text">
+                    <h2>Two Queen Junior Suite ADA</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Featuring the same spacious comfort as the Junior Suite, this ADA version provides
+                        enhanced accessibility for a worry-free stay.
+                    </p>
+                    <div class="room-features">
+                        <h3>Room Features:</h3>
+                        <ul>
+                            <li>All Two Queen Junior Suite Features</li>
+                            <li>ADA-Compliant Bathroom</li>
+                            <li>Wheelchair-Accessible Layout</li>
+                            <li>Lowered Amenities</li>
+                            <li>Visual & Audio Fire Alarms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!----------------------------- The Experience --------------------------->
+        <section id="experience-section" class="experience-row">
+            <!-- Left Side: Image Collage -->
+            <div class="experience-img">
+                <div class="image-collage">
+                    <img id="city-img" src="assets/images/city view.jpg" alt="City View" class="img-fluid collage-img">
+                    <img src="assets/images/Experience-3.jpg" alt="Fine Dining" class="img-fluid collage-img">
+                    <img src="assets/images/Experience-1.jpg" alt="Relaxing Spa" class="img-fluid collage-img">
+                </div>
+            </div>
+
+            <!-- Right Side: Text -->
+            <div class="experience-text">
+                <h2 id="experience-topic">The Experience</h2>
+                <div class="divider"></div>
+                <p>
+                    At Hotel Kings, we go beyond just offering a stay — we create unforgettable moments.
+                    From the moment you arrive, you’ll be immersed in comfort, elegance, and world-class service.
+                </p>
+                <p>
+                    Whether you’re here for business or leisure, our hotel provides the perfect atmosphere
+                    to relax, recharge, and reconnect. Every corner of our property is designed to make you
+                    feel both at home and indulged in luxury.
+                </p>
+                <p>
+                    Experience evenings filled with gourmet flavors, mornings with breathtaking views, and days
+                    enriched by cultural connections and curated activities. We believe in creating not just a stay,
+                    but a memory you will carry with you long after you leave.
+                </p>
+
+                <div class="experience-details">
+                    <h3>What Awaits You:</h3>
+                    <ul>
+                        <li>Relaxation with our spa and wellness treatments</li>
+                        <li>Exquisite dining experiences curated by top chefs</li>
+                        <li>Stunning views of the city skyline and surroundings</li>
+                        <li>Exclusive access to curated cultural tours and activities</li>
+                        <li>Personalized hospitality with attention to detail</li>
+                        <li>A perfect blend of modern comfort and timeless charm</li>
+                        <li>Memorable events and celebrations tailored to your desires</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!---------------------------- Footer ----------------------------->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <!-- Rooms Column -->
+                <div class="footer-col">
+                    <h4>ROOMS</h4>
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Standard King</a></li>
+                        <li><a href="#">Deluxe King</a></li>
+                        <li><a href="#">Deluxe King ADA</a></li>
+                        <li><a href="#">Two Double</a></li>
+                        <li><a href="#">Two Queen Junior Suite</a></li>
+                        <li><a href="#">Two Queen Junior Suite ADA</a></li>
+                    </ul>
+                </div>
+
+                <!-- About & Connect Column -->
+                <div class="footer-col">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Amenities</a></li>
+                        <li><a href="#">The Experience</a></li>
+                    </ul>
+
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Trip Advisor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-col newsletter">
+                    <h4>JOIN OUR NEWSLETTER</h4>
+                    <form>
+                        <label for="email">EMAIL ADDRESS</label>
+                        <div class="newsletter-input">
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <button type="submit">SUBSCRIBE NOW</button>
+                        </div>
+                    </form>
+                    <p class="newsletter-note">
+                        Stay updated with our latest offers, events, and news.
+                        Subscribe to our newsletter today!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="footer-divider">
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Terms Of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Accessibility Policy</a>
+                </div>
+                <div class="footer-copy">
+                    © 2025 All Rights Reserved | The Kings Hotel
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+
+    <!------------------------------ All Js For Index ---------------------->
+    <script src="js/gallery.js"></script>
+    <script src="js/footer.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

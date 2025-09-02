@@ -1,0 +1,73 @@
+
+        /* ------------------------------------ Header Responsive ---------------------------------------- */
+
+        /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+            #sidebar-header {
+                width: 150px;
+            }
+        }
+
+        /* // `md` applies to small devices (landscape phones, less than 768px) */
+        @media (max-width: 767.98px) {}
+
+        /* // `lg` applies to medium devices (tablets, less than 992px) */
+        @media (max-width: 991.98px) {
+            #logo-container h1 {
+                font-size: 20px !important;
+            }
+
+            #navbar-menu {
+                display: none;
+            }
+
+            #burger {
+                display: block;
+            }
+
+            #sidebar-header.show {
+                display: block;
+                right: 0;
+            }
+        }
+
+        /* // `xl` applies to large devices (desktops, less than 1200px) */
+        @media (max-width: 1199.98px) {
+            #logo {
+                width: 47.9px;
+                height: 47.9px;
+            }
+
+            header {
+                height: 8vh;
+
+            }
+
+        }
+
+        /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+        @media (max-width: 1399.98px) {
+            header {
+                height: 10vh;
+
+            }
+
+            #logo-container h1 {
+                font-size: 30px;
+            }
+        }
+
+
+        /*-------------------------------------- Room Section Responsive ----------------------- */
+        @media (max-width: 768px) {
+
+            .room-row,
+            .room-row.reverse {
+                flex-direction: column;
+            }
+
+            .room-img,
+            .room-text {
+                flex: 1 1 100%;
+            }
+        }

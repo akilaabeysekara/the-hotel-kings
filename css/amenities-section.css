@@ -1,0 +1,81 @@
+     #amenities-section {
+            font-family: 'Georgia', serif;
+            color: black;
+            padding: 0px 5%;
+
+        }
+
+        #amenities-section h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        #amenities-section .divider {
+            border-top: 1px solid #444;
+            margin: 15px 0 40px 0;
+        }
+
+        #amenities-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Left Image */
+        .amenities-img {
+            margin-top: 18vh;
+            flex: 1 1 45%;
+            border-radius: 8px;
+            overflow: hidden;
+            display: grid;
+            gap: 20px;
+        }
+
+        .amenities-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Right Text */
+        .amenities-text {
+            margin-top: 16vh;
+            flex: 1 1 50%;
+        }
+
+        .amenities-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Features List */
+        .room-features h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .room-features ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 8vh;
+        }
+
+        .room-features ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .room-features ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b6b4d;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+

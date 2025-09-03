@@ -1,102 +1,97 @@
 
 (() => {
-  let CONFIG = {
-    sectionSelector: '[data-animate]',  
-    revealSelector: '.reveal',          
-    threshold: 0.2,                    
-    defaultStagger: 0.2,               
-    replay: true                       
-  };
+  const SECTION_SELECTOR = '[data-animate]';
+  const REVEAL_SELECTOR  = '.reveal';
+  const DEFAULT_STAGGER  = 0.1;   
+  const REPLAY           = true;  
+  const prefersReduced   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let io; 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let revealIO;  
+  let sectionMO;  
 
-  function activate(section) {
-    const items = section.querySelectorAll(CONFIG.revealSelector);
-    const groupStagger = parseFloat(section.getAttribute('data-stagger-group') || CONFIG.defaultStagger);
-
-    if (prefersReducedMotion) {
-      items.forEach(el => {
-        el.classList.add('active');
-        el.style.transition = 'none';
-        el.style.transform = 'none';
-        el.style.opacity = '1';
-      });
+  function activate(el, i, groupStagger) {
+    if (prefersReduced) {
+      el.classList.add('active');
+      el.style.transition = 'none';
+      el.style.transform  = 'none';
+      el.style.opacity    = '1';
       return;
     }
-
-    items.forEach((el, i) => {
-      const stagger = parseFloat(el.getAttribute('data-stagger') || groupStagger);
-      el.style.transitionDelay = (i * stagger) + 's';
-      el.classList.add('active');
-    });
+    const stagger = parseFloat(el.dataset.stagger || groupStagger || DEFAULT_STAGGER);
+    el.style.transitionDelay = (i * stagger) + 's';
+    el.classList.add('active');
   }
 
-  function reset(section) {
-    const items = section.querySelectorAll(CONFIG.revealSelector);
-    items.forEach(el => {
-      el.classList.remove('active');
-    });
+  function reset(el) {
+    if (!REPLAY) return;
+    el.classList.remove('active');
+
   }
 
-  function onIntersect(entries) {
-    entries.forEach(entry => {
-      const section = entry.target;
-      const once = section.getAttribute('data-once') === 'true';     
-      const replay = once ? false : CONFIG.replay;                  
+  function initRevealObserver() {
+    if (revealIO) revealIO.disconnect();
 
-      if (entry.isIntersecting) {
-        activate(section);
-        if (!replay) {
-          io.unobserve(section); 
+    revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const section = el.closest(SECTION_SELECTOR);
+        const groupStagger = section ? parseFloat(section.dataset.staggerGroup || DEFAULT_STAGGER) : DEFAULT_STAGGER;
+
+        if (entry.isIntersecting) {
+          const siblings = Array.from(section?.querySelectorAll(REVEAL_SELECTOR) || []);
+          const index = Math.max(0, siblings.indexOf(el));
+          activate(el, index, groupStagger);
+          if (!REPLAY) revealIO.unobserve(el);
+        } else {
+          reset(el);
         }
-      } else if (replay) {
-        reset(section);          
-      }
-    });
-  }
-
-  function observeAll() {
-    document.querySelectorAll(CONFIG.sectionSelector).forEach(sec => io.observe(sec));
-  }
-
-  function init(userConfig = {}) {
-    CONFIG = { ...CONFIG, ...userConfig };
-
-    if (io) io.disconnect();
-
-    io = new IntersectionObserver(onIntersect, {
-      threshold: CONFIG.threshold,
+      });
+    }, {
+      threshold: 0.1,              
       root: null,
-      rootMargin: '0px'
+      rootMargin: '0px 0px -10% 0px'
+    });
+  }
+
+  function observeAllRevealsIn(section) {
+    section.querySelectorAll(REVEAL_SELECTOR).forEach((el) => revealIO.observe(el));
+  }
+
+  function init() {
+    initRevealObserver();
+
+    document.querySelectorAll(SECTION_SELECTOR).forEach((section) => {
+      observeAllRevealsIn(section);
     });
 
-    observeAll();
-
-    const mo = new MutationObserver(mutations => {
-      mutations.forEach(m => {
-        m.addedNodes.forEach(node => {
+    if (sectionMO) sectionMO.disconnect();
+    sectionMO = new MutationObserver((mutations) => {
+      mutations.forEach((m) => {
+        m.addedNodes.forEach((node) => {
           if (!(node instanceof Element)) return;
-          if (node.matches && node.matches(CONFIG.sectionSelector)) {
-            io.observe(node);
+
+          if (node.matches && node.matches(SECTION_SELECTOR)) {
+            observeAllRevealsIn(node);
           }
-          node.querySelectorAll && node.querySelectorAll(CONFIG.sectionSelector).forEach(sec => io.observe(sec));
+          node.querySelectorAll && node.querySelectorAll(SECTION_SELECTOR).forEach(observeAllRevealsIn);
+          node.querySelectorAll && node.querySelectorAll(`${SECTION_SELECTOR} ${REVEAL_SELECTOR}`).forEach((el) => {
+            revealIO.observe(el);
+          });
         });
       });
     });
-    mo.observe(document.body, { childList: true, subtree: true });
-
-    window.SectionAnimator = {
-      init,
-      refresh: () => { if (io) { io.disconnect(); io = new IntersectionObserver(onIntersect, { threshold: CONFIG.threshold }); observeAll(); } },
-      observe: el => io && io.observe(el),
-      unobserve: el => io && io.unobserve(el),
-      config: () => ({ ...CONFIG })
-    };
+    sectionMO.observe(document.body, { childList: true, subtree: true });
   }
 
+  function destroy() {
+    revealIO && revealIO.disconnect();
+    sectionMO && sectionMO.disconnect();
+  }
+
+  window.SectionAnimator = { init, destroy };
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => init());
+    document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }

@@ -78,7 +78,6 @@
         </nav>
 
 
-
         <!-- ------------------ Side Header (For Responsiveness) ------------------>
         <i class="fa-solid fa-bars" id="burger"></i>
 
@@ -119,12 +118,12 @@
     <main>
 
         <!------------------ Carousel Section ------------------------->
-        <section id="carousel-section">
-            <div id="carousel-hotel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        <section id="carousel-section" data-animate>
+            <div id="carousel-hotel" class="carousel slide carousel-fade reveal" data-bs-ride="carousel"
                 data-bs-interval="3000">
 
                 <!-- Indicators -->
-                <div class="carousel-indicators">
+                <div class="carousel-indicators reveal">
                     <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carousel-hotel" data-bs-slide-to="1"
@@ -139,7 +138,7 @@
 
 
                 <!-- Carousel Items -->
-                <div class="carousel-inner">
+                <div class="carousel-inner reveal">
                     <div class="carousel-item active">
                         <img src="assets/images/hotel-img1.jpg" class="d-block w-100" alt="Hotel Image 1">
                     </div>
@@ -158,12 +157,12 @@
                 </div>
 
                 <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-hotel"
+                <button class="carousel-control-prev reveal" type="button" data-bs-target="#carousel-hotel"
                     data-bs-slide="prev" aria-label="Previous Slide">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-hotel"
+                <button class="carousel-control-next reveal" type="button" data-bs-target="#carousel-hotel"
                     data-bs-slide="next" aria-label="Next Slide">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -172,9 +171,8 @@
         </section>
 
 
-
         <!-------------------------- Our Story Section ----------------------->
-        <section id="our-story" class="container-fluid">
+        <section id="our-story" class="container-fluid" data-animate>
             <div class="row g-4 align-items-start">
                 <!-- Left Side -->
                 <div class="col-lg-6 story-content">
@@ -204,7 +202,7 @@
                     </ul>
                 </div>
 
-                <!-- Right Side (kept your two-tier gallery heights) -->
+                <!-- Right Side (two-tier gallery) -->
                 <div class="col-lg-6">
                     <div class="row g-3 story-image-gallery">
                         <div class="col-12">
@@ -223,15 +221,14 @@
         </section>
 
 
-
         <!------------------------ Photo Gallery Section ------------------------->
-        <section id="photo-gallery">
+        <section id="photo-gallery" data-animate>
             <div class="photo-container">
-                <h2 class="gallery-header">Our Gallery</h2>
-                <hr id="gallery-hr">
+                <h2 class="gallery-header reveal">Our Gallery</h2>
+                <hr id="gallery-hr" class="reveal">
 
                 <!-- Single Image Display -->
-                <div class="gallery-display">
+                <div class="gallery-display reveal">
                     <img id="active-photo" src="assets/images/hotel-img1.jpg" class="gallery-image" alt="Gallery Image">
 
                     <!-- Prev/Next Buttons -->
@@ -240,7 +237,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <nav>
+                <nav class="reveal">
                     <ul class="gallery-pagination">
                         <li class="page-item active"><a class="page-link" href="#active-photo"
                                 onclick="switchGallery(1)">1</a></li>
@@ -260,9 +257,8 @@
         </section>
 
 
-
         <!--------------------------- Amenities Section ------------------------->
-        <section id="amenities-section">
+        <section id="amenities-section" data-animate>
             <div class="row align-items-center">
                 <!-- Left: Images -->
                 <div class="amenities-img">
@@ -276,9 +272,10 @@
                     <div class="divider reveal"></div>
                     <p class="reveal">
                         The Kings Hotel features 52 non-smoking rooms and suites, each designed to evoke a sense of
-                        coziness and warmth. The soothing wooden accents and natural wood tones create an inviting
-                        atmosphere,
-                        while luxurious golden details and striking black and white contrasts elevate the aesthetic.
+                        coziness
+                        and warmth. The soothing wooden accents and natural wood tones create an inviting atmosphere,
+                        while
+                        luxurious golden details and striking black and white contrasts elevate the aesthetic.
                     </p>
 
                     <div class="room-features reveal">
@@ -323,21 +320,21 @@
 
 
         <!-- -------------------------- Room Section ---------------------------->
-        <section id="room-section">
+        <section id="room-section" data-animate>
 
             <!-- ------------------------ Standard King ------------------------->
             <div class="room-row" id="standard-king">
                 <div class="room-img">
-                    <img src="assets/images/room-1.jpg" alt="Standard King Room" class="img-fluid">
+                    <img src="assets/images/room-1.jpg" alt="Standard King Room" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Standard King</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Standard King</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         Our Standard King rooms are designed with warm wooden accents and luxurious golden details,
                         offering a cozy yet stylish retreat. Perfect for solo travelers or couples.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>High-Speed Complimentary Wi-Fi</li>
@@ -354,16 +351,16 @@
             <!-- ---------------------- Deluxe King ------------------------------->
             <div class="room-row reverse" id="deluxe-king">
                 <div class="room-img">
-                    <img src="assets/images/room-2.jpg" alt="Deluxe King Room" class="img-fluid">
+                    <img src="assets/images/room-2.jpg" alt="Deluxe King Room" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Deluxe King</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Deluxe King</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         Spacious and elegant, the Deluxe King offers upgraded amenities and stunning city views.
                         Ideal for business travelers or couples seeking extra comfort.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>All Standard King Features</li>
@@ -379,17 +376,17 @@
             <!-------------------------- Deluxe King ADA ------------------------->
             <div class="room-row" id="deluxe-king-ada">
                 <div class="room-img">
-                    <img src="assets/images/room-3.jpg" alt="Deluxe King ADA Room" class="img-fluid">
+                    <img src="assets/images/room-3.jpg" alt="Deluxe King ADA Room" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Deluxe King ADA</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Deluxe King ADA</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         Designed with accessibility in mind, the Deluxe King ADA ensures a comfortable stay for all
                         guests,
                         with spacious layouts and ADA-compliant features.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>All Deluxe King Features</li>
@@ -405,16 +402,16 @@
             <!------------------------------- Two Double ------------------------>
             <div class="room-row reverse" id="two-double">
                 <div class="room-img">
-                    <img src="assets/images/room-4.jpg" alt="Two Double Room" class="img-fluid">
+                    <img src="assets/images/room-4.jpg" alt="Two Double Room" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Two Double</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Two Double</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         Ideal for families or groups, our Two Double rooms offer extra sleeping space without
                         compromising comfort and style.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>Two Double Beds with Premium Linens</li>
@@ -430,16 +427,16 @@
             <!----------------------- Two Queen Junior Suite -------------------->
             <div class="room-row" id="two-queen-junior-suite">
                 <div class="room-img">
-                    <img src="assets/images/room-5.jpg" alt="Two Queen Junior Suite" class="img-fluid">
+                    <img src="assets/images/room-5.jpg" alt="Two Queen Junior Suite" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Two Queen Junior Suite</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Two Queen Junior Suite</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         A perfect blend of space and luxury, the Two Queen Junior Suite offers separate seating areas
                         and upgraded amenities, perfect for longer stays.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>Two Queen Beds</li>
@@ -455,16 +452,16 @@
             <!--------------------- Two Queen Junior Suite ADA ------------------->
             <div class="room-row reverse" id="two-queen-junior-suite-ada">
                 <div class="room-img">
-                    <img src="assets/images/room-6.jpg" alt="Two Queen Junior Suite ADA" class="img-fluid">
+                    <img src="assets/images/room-6.jpg" alt="Two Queen Junior Suite ADA" class="img-fluid reveal">
                 </div>
                 <div class="room-text">
-                    <h2>Two Queen Junior Suite ADA</h2>
-                    <div class="divider"></div>
-                    <p>
+                    <h2 class="reveal">Two Queen Junior Suite ADA</h2>
+                    <div class="divider reveal"></div>
+                    <p class="reveal">
                         Featuring the same spacious comfort as the Junior Suite, this ADA version provides
                         enhanced accessibility for a worry-free stay.
                     </p>
-                    <div class="room-features">
+                    <div class="room-features reveal">
                         <h3>Room Features:</h3>
                         <ul>
                             <li>All Two Queen Junior Suite Features</li>
@@ -480,7 +477,7 @@
 
 
         <!----------------------------- The Experience --------------------------->
-        <section id="experience-section" class="container-fluid">
+        <section id="experience-section" class="container-fluid" data-animate>
             <div class="row g-4 align-items-center experience-row">
                 <!-- Left: Image Collage -->
                 <div class="col-lg-6 experience-img">
@@ -529,7 +526,6 @@
                 </div>
             </div>
         </section>
-
 
 
         <!---------------------------- Footer ----------------------------->
@@ -604,12 +600,11 @@
 
 
     <!------------------------------ All Js For Index ---------------------->
-    <!-- <script src="js/story.js"></script> -->
     <script src="js/gallery.js"></script>
-    <!-- <script src="js/amenities.js"></script> -->
     <script src="js/footer.js"></script>
-    <script src="js/animator.js"></script>
 
+    <!-- Common animator handling all [data-animate] sections -->
+    <script src="js/animator.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"

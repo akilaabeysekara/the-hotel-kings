@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/experience-section.css">
     <link rel="stylesheet" href="css/responsive-design.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animator.css">
 
     <style>
         body {
@@ -479,50 +480,55 @@
 
 
         <!----------------------------- The Experience --------------------------->
-        <section id="experience-section" class="experience-row">
-            <!-- Left Side: Image Collage -->
-            <div class="experience-img">
-                <div class="image-collage">
-                    <img id="city-img" src="assets/images/city view.jpg" alt="City View" class="img-fluid collage-img">
-                    <img src="assets/images/Experience-3.jpg" alt="Fine Dining" class="img-fluid collage-img">
-                    <img src="assets/images/Experience-1.jpg" alt="Relaxing Spa" class="img-fluid collage-img">
+        <section id="experience-section" class="container-fluid">
+            <div class="row g-4 align-items-center experience-row">
+                <!-- Left: Image Collage -->
+                <div class="col-lg-6 experience-img">
+                    <div class="image-collage">
+                        <img id="city-img" src="assets/images/city view.jpg" alt="City View"
+                            class="img-fluid collage-img reveal img1">
+                        <img src="assets/images/Experience-3.jpg" alt="Fine Dining"
+                            class="img-fluid collage-img reveal img2">
+                        <img src="assets/images/Experience-1.jpg" alt="Relaxing Spa"
+                            class="img-fluid collage-img reveal img3">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Right Side: Text -->
-            <div class="experience-text">
-                <h2 id="experience-topic">The Experience</h2>
-                <div class="divider"></div>
-                <p>
-                    At Hotel Kings, we go beyond just offering a stay — we create unforgettable moments.
-                    From the moment you arrive, you’ll be immersed in comfort, elegance, and world-class service.
-                </p>
-                <p>
-                    Whether you’re here for business or leisure, our hotel provides the perfect atmosphere
-                    to relax, recharge, and reconnect. Every corner of our property is designed to make you
-                    feel both at home and indulged in luxury.
-                </p>
-                <p>
-                    Experience evenings filled with gourmet flavors, mornings with breathtaking views, and days
-                    enriched by cultural connections and curated activities. We believe in creating not just a stay,
-                    but a memory you will carry with you long after you leave.
-                </p>
+                <!-- Right: Text -->
+                <div class="col-lg-6 experience-text">
+                    <h2 id="experience-topic" class="reveal h2">The Experience</h2>
+                    <div class="divider reveal hr"></div>
 
-                <div class="experience-details">
-                    <h3>What Awaits You:</h3>
-                    <ul>
-                        <li>Relaxation with our spa and wellness treatments</li>
-                        <li>Exquisite dining experiences curated by top chefs</li>
-                        <li>Stunning views of the city skyline and surroundings</li>
-                        <li>Exclusive access to curated cultural tours and activities</li>
-                        <li>Personalized hospitality with attention to detail</li>
-                        <li>A perfect blend of modern comfort and timeless charm</li>
-                        <li>Memorable events and celebrations tailored to your desires</li>
-                    </ul>
+                    <p class="reveal p1">
+                        At Hotel Kings, we go beyond just offering a stay — we create unforgettable moments.
+                        From the moment you arrive, you’ll be immersed in comfort, elegance, and world-class service.
+                    </p>
+                    <p class="reveal p2">
+                        Whether you’re here for business or leisure, our hotel provides the perfect atmosphere
+                        to relax, recharge, and reconnect. Every corner of our property is designed to make you
+                        feel both at home and indulged in luxury.
+                    </p>
+                    <p class="reveal p3">
+                        Experience evenings filled with gourmet flavors, mornings with breathtaking views, and days
+                        enriched by cultural connections and curated activities. We believe in creating not just a stay,
+                        but a memory you will carry with you long after you leave.
+                    </p>
+
+                    <div class="experience-details reveal list">
+                        <h3>What Awaits You:</h3>
+                        <ul>
+                            <li>Relaxation with our spa and wellness treatments</li>
+                            <li>Exquisite dining experiences curated by top chefs</li>
+                            <li>Stunning views of the city skyline and surroundings</li>
+                            <li>Exclusive access to curated cultural tours and activities</li>
+                            <li>Personalized hospitality with attention to detail</li>
+                            <li>A perfect blend of modern comfort and timeless charm</li>
+                            <li>Memorable events and celebrations tailored to your desires</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-
 
 
 
@@ -598,10 +604,11 @@
 
 
     <!------------------------------ All Js For Index ---------------------->
-    <script src="js/story.js"></script>
+    <!-- <script src="js/story.js"></script> -->
     <script src="js/gallery.js"></script>
-    <script src="js/amenities.js"></script>
+    <!-- <script src="js/amenities.js"></script> -->
     <script src="js/footer.js"></script>
+    <script src="js/animator.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

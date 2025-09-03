@@ -1,10 +1,8 @@
-/* ============================
-   Our Story Section Styles
-   ============================ */
+
 #our-story {
   font-family: 'Georgia', serif;
   margin: 5rem auto;
-  padding: 20vh 5% 0 5%; /* top, right, bottom, left */
+  padding: 20vh 5% 0 5%; 
   align-items: start;
 }
 
@@ -72,24 +70,19 @@
   font-weight: bold;
 }
 
-/* ============================
-   Animation Styles
-   ============================ */
 
-/* Initial hidden state */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* When visible on scroll */
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Optional staggered delays */
 .reveal.h2     { transition-delay: 0.2s; }
 .reveal.hr     { transition-delay: 0.35s; }
 .reveal.p1     { transition-delay: 0.5s; }

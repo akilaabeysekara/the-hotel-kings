@@ -2,94 +2,80 @@
 (() => {
   const SECTION_SELECTOR = '[data-animate]';
   const REVEAL_SELECTOR  = '.reveal';
-  const DEFAULT_STAGGER  = 0.1;   
-  const REPLAY           = true;  
+  const TRIGGER          = 0.5;   // 50% of viewport height
+  const REPLAY           = true;
   const prefersReduced   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let revealIO;  
-  let sectionMO;  
+  let ticking = false;
+  const sections = [];
 
-  function activate(el, i, groupStagger) {
+  function activateSection(section) {
+    const items = section.querySelectorAll(REVEAL_SELECTOR);
+
     if (prefersReduced) {
-      el.classList.add('active');
-      el.style.transition = 'none';
-      el.style.transform  = 'none';
-      el.style.opacity    = '1';
+      items.forEach(el => {
+        el.classList.add('active');
+        el.style.transition = 'none';
+        el.style.transform  = 'none';
+        el.style.opacity    = '1';
+      });
+      section._animActive = true;
       return;
     }
-    const stagger = parseFloat(el.dataset.stagger || groupStagger || DEFAULT_STAGGER);
-    el.style.transitionDelay = (i * stagger) + 's';
-    el.classList.add('active');
-  }
 
-  function reset(el) {
-    if (!REPLAY) return;
-    el.classList.remove('active');
+    // Reset first (for replay)
+    items.forEach(el => el.classList.remove('active'));
 
-  }
+    // Force reflow
+    section.offsetWidth;
 
-  function initRevealObserver() {
-    if (revealIO) revealIO.disconnect();
-
-    revealIO = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
-        const section = el.closest(SECTION_SELECTOR);
-        const groupStagger = section ? parseFloat(section.dataset.staggerGroup || DEFAULT_STAGGER) : DEFAULT_STAGGER;
-
-        if (entry.isIntersecting) {
-          const siblings = Array.from(section?.querySelectorAll(REVEAL_SELECTOR) || []);
-          const index = Math.max(0, siblings.indexOf(el));
-          activate(el, index, groupStagger);
-          if (!REPLAY) revealIO.unobserve(el);
-        } else {
-          reset(el);
-        }
-      });
-    }, {
-      threshold: 0.1,              
-      root: null,
-      rootMargin: '0px 0px -10% 0px'
+    // Next frame: add active to all items at once
+    requestAnimationFrame(() => {
+      items.forEach(el => el.classList.add('active'));
+      section._animActive = true;
     });
   }
 
-  function observeAllRevealsIn(section) {
-    section.querySelectorAll(REVEAL_SELECTOR).forEach((el) => revealIO.observe(el));
+  function resetSection(section) {
+    if (!REPLAY) return;
+    section.querySelectorAll(REVEAL_SELECTOR).forEach(el => {
+      el.classList.remove('active');
+    });
+    section._animActive = false;
+  }
+
+  function sectionHitsTrigger(section) {
+    const rect = section.getBoundingClientRect();
+    const vh   = window.innerHeight || document.documentElement.clientHeight;
+    const line = vh * TRIGGER;
+    return rect.top <= line && rect.bottom >= line;
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      sections.forEach(sec => {
+        const hit = sectionHitsTrigger(sec);
+        if (hit && !sec._animActive) {
+          activateSection(sec);
+        } else if (!hit && sec._animActive) {
+          resetSection(sec);
+        }
+      });
+      ticking = false;
+    });
   }
 
   function init() {
-    initRevealObserver();
-
-    document.querySelectorAll(SECTION_SELECTOR).forEach((section) => {
-      observeAllRevealsIn(section);
-    });
-
-    if (sectionMO) sectionMO.disconnect();
-    sectionMO = new MutationObserver((mutations) => {
-      mutations.forEach((m) => {
-        m.addedNodes.forEach((node) => {
-          if (!(node instanceof Element)) return;
-
-          if (node.matches && node.matches(SECTION_SELECTOR)) {
-            observeAllRevealsIn(node);
-          }
-          node.querySelectorAll && node.querySelectorAll(SECTION_SELECTOR).forEach(observeAllRevealsIn);
-          node.querySelectorAll && node.querySelectorAll(`${SECTION_SELECTOR} ${REVEAL_SELECTOR}`).forEach((el) => {
-            revealIO.observe(el);
-          });
-        });
-      });
-    });
-    sectionMO.observe(document.body, { childList: true, subtree: true });
+    document.querySelectorAll(SECTION_SELECTOR).forEach(sec => sections.push(sec));
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
   }
 
-  function destroy() {
-    revealIO && revealIO.disconnect();
-    sectionMO && sectionMO.disconnect();
-  }
 
-  window.SectionAnimator = { init, destroy };
-
+  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

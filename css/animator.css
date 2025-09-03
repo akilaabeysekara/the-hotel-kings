@@ -1,13 +1,30 @@
+
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(60px); /* visible motion */
+  transition:
+    opacity 0.9s cubic-bezier(.25,.8,.25,1),
+    transform 0.9s cubic-bezier(.25,.8,.25,1);
+  transition-delay: 0.25s;   /* fixed delay for ALL items */
+  will-change: opacity, transform;
 }
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .reveal { transition: none; transform: none; opacity: 1; }
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+
+section[data-animate] {
+  min-height: 100vh;
 }

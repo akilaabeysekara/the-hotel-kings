@@ -1,105 +1,99 @@
 #photo-gallery {
-            padding-top: 13vh;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-            font-family: 'Georgia', serif;
+  padding-top: 13vh;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-family: 'Georgia', serif;
+}
 
-        }
+.gallery-header {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-        .gallery-header {
-            text-align: center;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+#gallery-hr {
+  border: 1px solid #000;
+  margin: 0px auto 20px auto;
+  max-width: 1150px;
+  border-radius: 5px;
+}
 
-        #gallery-hr {
-            border: 1px solid #000;
-            margin: 0px auto 20px auto;
-            max-width: 1150px;
-            border-radius: 5px;
-        }
+.gallery-display {
+  position: relative;
+  max-width: 1150px;
+  margin: auto;
+}
 
-        .gallery-display {
-            position: relative;
-            max-width: 1150px;
-            margin: auto;
-        }
+.gallery-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
 
-        .gallery-image {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            border-radius: 12px;
-            display: block;
-            transition: opacity 0.5s ease-in-out;
-            opacity: 1;
-        }
+.gallery-image.fade-out {
+  opacity: 0;
+}
 
-        .gallery-image.fade-out {
-            opacity: 0;
-        }
+/* Prev/Next Buttons */
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #E2B060;
+  color: #3E1F0B;
+  font-size: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: 0.3s;
+  z-index: 10;
+}
 
-        /* Prev/Next Buttons */
-        .gallery-nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #E2B060;
-            color: #3E1F0B;
-            font-size: 60px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            padding: 0 12px;
-            transition: 0.3s;
-            z-index: 10;
-        }
+.gallery-nav-btn:hover {
+  color: #E2B060;
+  background-color: #3E1F0B;
+}
 
-        .gallery-nav-btn:hover {
-            color: #E2B060;
-            background-color: #3E1F0B;
-        }
+.gallery-prev { left: 20px; }
+.gallery-next { right: 20px; }
 
-        .gallery-prev {
-            left: 20px;
-        }
+/* Pagination */
+.gallery-pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
 
-        .gallery-next {
-            right: 20px;
-        }
+.gallery-pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3E1F0B;
+  color: #E2B060;
+  border: none;
+  margin: 3px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
-        /* Pagination */
-        .gallery-pagination {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
+.gallery-pagination .page-link:hover {
+  background-color: #E2B060;
+  color: #3E1F0B;
+}
 
-        .gallery-pagination .page-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #3E1F0B;
-            color: #E2B060;
-            border: none;
-            margin: 3px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .gallery-pagination .page-link:hover {
-            background-color: #E2B060;
-            color: #3E1F0B;
-        }
-
-        .gallery-pagination .page-item.active .page-link {
-            background-color: #E2B060;
-            color: #3E1F0B;
-        }
-
+.gallery-pagination .page-item.active .page-link {
+  background-color: #E2B060;
+  color: #3E1F0B;
+}

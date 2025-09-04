@@ -227,11 +227,11 @@
                 <h2 class="gallery-header reveal">Our Gallery</h2>
                 <hr id="gallery-hr" class="reveal">
 
-                <!-- Single Image Display -->
+                <!-- Display -->
                 <div class="gallery-display reveal">
                     <img id="active-photo" src="assets/images/hotel-img1.jpg" class="gallery-image" alt="Gallery Image">
 
-                    <!-- Prev/Next Buttons -->
+                    <!-- Prev / Next -->
                     <button class="gallery-nav-btn gallery-prev" onclick="changeImage(-1)">&#10094;</button>
                     <button class="gallery-nav-btn gallery-next" onclick="changeImage(1)">&#10095;</button>
                 </div>
@@ -239,18 +239,13 @@
                 <!-- Pagination -->
                 <nav class="reveal">
                     <ul class="gallery-pagination">
-                        <li class="page-item active"><a class="page-link" href="#active-photo"
-                                onclick="switchGallery(1)">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(2)">2</a>
+                        <li class="page-item active"><button class="page-link" onclick="switchGallery(1)">1</button>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(3)">3</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(4)">4</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(5)">5</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#active-photo" onclick="switchGallery(6)">6</a>
-                        </li>
+                        <li class="page-item"><button class="page-link" onclick="switchGallery(2)">2</button></li>
+                        <li class="page-item"><button class="page-link" onclick="switchGallery(3)">3</button></li>
+                        <li class="page-item"><button class="page-link" onclick="switchGallery(4)">4</button></li>
+                        <li class="page-item"><button class="page-link" onclick="switchGallery(5)">5</button></li>
+                        <li class="page-item"><button class="page-link" onclick="switchGallery(6)">6</button></li>
                     </ul>
                 </nav>
             </div>

@@ -82,3 +82,13 @@
   .experience-row { gap: 24px; margin: 40px 0; }
   .image-collage { margin-top: 8vh; }
 }
+
+@media (max-width: 575.98px) {
+  #experience-topic { font-size: 32px; }
+  .experience-row { flex-direction: column; }
+  .experience-img, .experience-text { flex: 1 1 100%; }
+  .image-collage { grid-template-columns: 1fr; gap: 20px; }
+  #city-img { height: auto; }
+  .image-collage img:first-child { grid-column: auto; }
+  .experience-text { margin-bottom: 0; }
+}

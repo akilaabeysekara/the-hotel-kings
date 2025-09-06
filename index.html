@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/amenities-section.css">
     <link rel="stylesheet" href="css/gallery-section.css">
     <link rel="stylesheet" href="css/room-section.css">
+    <link rel="stylesheet" href="css/location-section.css">
     <link rel="stylesheet" href="css/experience-section.css">
     <link rel="stylesheet" href="css/responsive-design.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -69,8 +70,7 @@
                 <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Location</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
                 <li>
                     <a id="reserve-btn" href="#">Reserve</a>
                 </li>
@@ -104,8 +104,7 @@
                 <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Location</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
                 <li>
                     <a id="reserve-btn" href="#">Reserve</a>
                 </li>
@@ -521,6 +520,53 @@
                 </div>
             </div>
         </section>
+
+        <!----------------------------- Location Section --------------------------->
+        <section id="location-section" class="container-fluid">
+            <div class="row g-4 align-items-center">
+
+                <!-- Left: Text/Card -->
+                <div class="col-lg-5">
+                    <h2 class="location-title">Location</h2>
+                    <hr class="location-divider">
+
+                    <div class="location-card">
+                        <h3 class="hotel-name">Kings Hotel</h3>
+                        <p class="hotel-address">
+                            123 Wilshire Blvd,<br>
+                            Koreatown, Los Angeles, CA 90010
+                        </p>
+                        <p class="hotel-contact">
+                            Phone: <a href="tel:+12135551234">+1 (213) 555-1234</a><br>
+                            Email: <a href="mailto:info@kingshotel.com">info@kingshotel.com</a>
+                        </p>
+                        <a class="btn location-cta"
+                            href="https://www.google.com/maps/search/?api=1&query=Kings+Hotel+Koreatown+Los+Angeles"
+                            target="_blank" rel="noopener">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Map Image -->
+                <div class="col-lg-7">
+                    <div class="map-wrap">
+                        <!-- Replace this image with your own static map -->
+                        <img src="assets/images/map-koreatown.jpg"
+                            alt="Map showing Kings Hotel location in Koreatown, Los Angeles" class="map-image" />
+
+                        <!-- Optional overlay pin (pure CSS) -->
+                        <div class="map-pin" aria-hidden="true">
+                            <span class="pin-head"></span>
+                            <span class="pin-tail"></span>
+                        </div>
+                    </div>
+                    <p class="map-note">Parking available on-site. 5 minutes from Metro.</p>
+                </div>
+
+            </div>
+        </section>
+
 
 
         <!---------------------------- Footer ----------------------------->

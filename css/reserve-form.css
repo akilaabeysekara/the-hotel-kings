@@ -1,0 +1,31 @@
+#reserveModal .modal-header {
+  background-color: #3E1F0B;
+  color: #E2B060;
+  border-bottom: none;
+}
+#reserveModal .modal-title {
+  color: #E2B060;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#reserveModal .btn-close {
+  filter: invert(77%) sepia(45%) saturate(348%) hue-rotate(6deg) brightness(95%) contrast(95%);
+  opacity: 1;
+}
+#reserveModal .btn-close:hover {
+  filter: invert(89%) sepia(58%) saturate(602%) hue-rotate(12deg) brightness(102%) contrast(92%);
+}
+
+.reserve-frame { height: 80vh; }
+
+@media (max-width: 991.98px) {
+  #reserveModal .modal-title { font-size: 1.125rem; }
+  #reserveModal .modal-header { padding: 10px 14px; }
+  .reserve-frame { height: 84vh; }
+}
+
+@media (max-width: 575.98px) {
+  .reserve-frame { height: calc(100dvh - 56px); } 
+  #reserveModal .btn-close { transform: scale(1.1); }
+}

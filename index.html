@@ -72,7 +72,7 @@
                 <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="#location-section">Location</a></li>
                 <li>
-                    <a id="reserve-btn" href="pages/reserve.html">Reserve</a>
+                    <a id="reserve-btn" href="pages/reserve.html" target="_blank">Reserve</a>
                 </li>
             </ul>
         </nav>
@@ -572,72 +572,84 @@
 
 
 
-        <!---------------------------- Footer ----------------------------->
-        <footer class="site-footer">
-            <div class="footer-container">
-                <!-- Rooms Column -->
-                <div class="footer-col">
-                    <h4>ROOMS</h4>
-                    <ul>
-                        <li><a href="#amenities-section">Overview</a></li>
-                        <li><a href="#standard-king">Standard King</a></li>
-                        <li><a href="#deluxe-king">Deluxe King</a></li>
-                        <li><a href="#deluxe-king-ada">Deluxe King ADA</a></li>
-                        <li><a href="#two-double">Two Double</a></li>
-                        <li><a href="#two-queen-junior-suite">Two Queen Junior Suite</a></li>
-                        <li><a href="#two-queen-junior-suite-ada">Two Queen Junior Suite ADA</a></li>
-                    </ul>
+        <!----------------------------- Footer --------------------------->
+        <footer class="site-footer mt-5">
+            <div class="container">
+                <div class="row gy-4 footer-top">
+                    <!-- Rooms -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h4 class="footer-title">ROOMS</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="footer-link" href="#amenities-section">Overview</a></li>
+                            <li><a class="footer-link" href="#standard-king">Standard King</a></li>
+                            <li><a class="footer-link" href="#deluxe-king">Deluxe King</a></li>
+                            <li><a class="footer-link" href="#deluxe-king-ada">Deluxe King ADA</a></li>
+                            <li><a class="footer-link" href="#two-double">Two Double</a></li>
+                            <li><a class="footer-link" href="#two-queen-junior-suite">Two Queen Junior Suite</a></li>
+                            <li><a class="footer-link" href="#two-queen-junior-suite-ada">Two Queen Junior Suite ADA</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- About & Connect -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h4 class="footer-title">ABOUT</h4>
+                        <ul class="list-unstyled">
+                            <li><a class="footer-link" href="#our-story">Our Story</a></li>
+                            <li><a class="footer-link" href="#amenities-section">Amenities</a></li>
+                            <li><a class="footer-link" href="#experience-section">The Experience</a></li>
+                        </ul>
+
+                        <h4 class="footer-title mt-3">CONNECT</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="footer-link"
+                                    href="https://web.facebook.com/KingsHotelStokenchurch/?_rdc=1&_rdr#" target="_blank"
+                                    rel="noopener">Facebook</a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://www.instagram.com/kingshotel" target="_blank"
+                                    rel="noopener">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-12 col-lg-4">
+                        <h4 class="footer-title">JOIN OUR NEWSLETTER</h4>
+                        <form id="newsletterForm" class="newsletter-form" novalidate>
+                            <label for="newsletterEmail" class="form-label small text-uppercase mb-1">Email
+                                Address</label>
+                            <div class="d-flex align-items-center gap-2 newsletter-input">
+                                <input type="email" id="newsletterEmail"
+                                    class="form-control bg-transparent text-white border-0 border-bottom rounded-0"
+                                    placeholder="Enter your email" required>
+                                <button type="submit" class="btn btn-subscribe">Subscribe Now</button>
+                            </div>
+                            <div class="invalid-feedback d-block mt-1" id="newsletterError" style="display:none;">
+                                Please enter a valid email address.
+                            </div>
+                        </form>
+                        <p class="newsletter-note mb-0 mt-2">
+                            Stay updated with our latest offers, events, and news. Subscribe to our newsletter today!
+                        </p>
+                    </div>
                 </div>
 
-                <!-- About & Connect Column -->
-                <div class="footer-col">
-                    <h4>ABOUT</h4>
-                    <ul>
-                        <li><a href="#our-story">Our Story</a></li>
-                        <li><a href="#amenities-section">Amenities</a></li>
-                        <li><a href="#experience-section">The Experience</a></li>
-                    </ul>
+                <!-- Divider -->
+                <hr class="footer-divider my-4">
 
-                    <h4>CONNECT</h4>
-                    <ul>
-                        <li><a href="https://web.facebook.com/KingsHotelStokenchurch/?_rdc=1&_rdr#" target="_blank"
-                                rel="noopener">Facebook</a>
-                        </li>
-                        <li><a href="https://www.instagram.com/kingshotel" target="_blank" rel="noopener">Instagram</a>
-                        </li>
-
-                </div>
-
-                <!-- Newsletter Column -->
-                <div class="footer-col newsletter">
-                    <h4>JOIN OUR NEWSLETTER</h4>
-                    <form>
-
-                        <label for="email">EMAIL ADDRESS</label>
-                        <div class="newsletter-input">
-                            <input type="email" id="email" placeholder="Enter your email">
-                            <button type="submit">SUBSCRIBE NOW</button>
-                        </div>
-                    </form>
-                    <p class="newsletter-note">
-                        Stay updated with our latest offers, events, and news.
-                        Subscribe to our newsletter today!
-                    </p>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <hr class="footer-divider">
-
-            <!-- Bottom Bar -->
-            <div class="footer-bottom">
-                <div class="footer-links">
-                    <a href="#">Terms Of Use</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Accessibility Policy</a>
-                </div>
-                <div class="footer-copy">
-                    © 2025 All Rights Reserved | The Kings Hotel
+                <!-- Bottom Bar -->
+                <div
+                    class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                    <div class="footer-links d-flex gap-3">
+                        <a class="footer-link muted" href="#">Terms Of Use</a>
+                        <a class="footer-link muted" href="#">Privacy Policy</a>
+                        <a class="footer-link muted" href="#">Accessibility Policy</a>
+                    </div>
+                    <div class="footer-copy">
+                        © 2025 All Rights Reserved | The Kings Hotel
+                    </div>
                 </div>
             </div>
         </footer>

@@ -1,11 +1,12 @@
-const burger = document.getElementById("burger");
-        const sidebar = document.getElementById("sidebar-header");
-        const closeBtn = document.getElementById("closebtn");
+document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletterEmail').value.trim();
 
-        burger.addEventListener("click", () => {
-            sidebar.classList.add("show");
-        });
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return;
+  }
 
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.remove("show");
-        });
+  alert('Thank you for subscribing!');
+  this.reset();
+});

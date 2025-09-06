@@ -70,7 +70,7 @@
                 <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+                <li class="nav-item"><a class="nav-link" href="#location-section">Location</a></li>
                 <li>
                     <a id="reserve-btn" href="#">Reserve</a>
                 </li>
@@ -104,7 +104,7 @@
                 <li class="nav-item"><a class="nav-link" href="#photo-gallery">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#amenities-section">Amenities</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience-section">The Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+                <li class="nav-item"><a class="nav-link" href="#location-section">Location</a></li>
                 <li>
                     <a id="reserve-btn" href="#">Reserve</a>
                 </li>
@@ -521,16 +521,19 @@
             </div>
         </section>
 
+
+
+
         <!----------------------------- Location Section --------------------------->
-        <section id="location-section" class="container-fluid">
+        <section id="location-section" class="container-fluid" data-animate>
             <div class="row g-4 align-items-center">
 
                 <!-- Left: Text/Card -->
                 <div class="col-lg-5">
-                    <h2 class="location-title">Location</h2>
-                    <hr class="location-divider">
+                    <h2 class="location-title reveal" data-reveal="up" data-reveal-delay="0">Location</h2>
+                    <hr class="location-divider reveal" data-reveal="fade" data-reveal-delay="100">
 
-                    <div class="location-card">
+                    <div class="location-card reveal" data-reveal="up" data-reveal-delay="200">
                         <h3 class="hotel-name">Kings Hotel</h3>
                         <p class="hotel-address">
                             123 Wilshire Blvd,<br>
@@ -550,18 +553,18 @@
 
                 <!-- Right: Map Image -->
                 <div class="col-lg-7">
-                    <div class="map-wrap">
-                        <!-- Replace this image with your own static map -->
+                    <div class="map-wrap reveal" data-reveal="fade" data-reveal-delay="150">
                         <img src="assets/images/map-koreatown.jpg"
                             alt="Map showing Kings Hotel location in Koreatown, Los Angeles" class="map-image" />
 
-                        <!-- Optional overlay pin (pure CSS) -->
-                        <div class="map-pin" aria-hidden="true">
+                        <!-- Decorative pin -->
+                        <div class="map-pin reveal" data-reveal="pin" data-reveal-delay="350" aria-hidden="true">
                             <span class="pin-head"></span>
                             <span class="pin-tail"></span>
                         </div>
                     </div>
-                    <p class="map-note">Parking available on-site. 5 minutes from Metro.</p>
+                    <p class="map-note reveal" data-reveal="up" data-reveal-delay="300">Parking available on-site. 5
+                        minutes from Metro.</p>
                 </div>
 
             </div>

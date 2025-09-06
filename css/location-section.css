@@ -1,5 +1,5 @@
 #location-section {
-  padding: 13vh 5% 8vh 5%;
+  padding: 25vh 5% 8vh 5%;
   font-family: 'Georgia', serif;
   color: #000;
 }
@@ -18,8 +18,8 @@
 }
 
 .location-card {
-  background: #fff;
-  border: 1px solid #eee;
+  background: #BB986E;
+  border: 1px solid black;
   border-radius: 14px;
   padding: 22px 22px 26px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.06);

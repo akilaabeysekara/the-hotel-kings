@@ -71,6 +71,7 @@
   height: 480px;         
   object-fit: cover;
   border-radius: 14px;
+  border: 2px solid black;
 }
 
 .map-pin {

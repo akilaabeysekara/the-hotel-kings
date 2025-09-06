@@ -2,7 +2,7 @@
 (() => {
   const SECTION_SELECTOR = '[data-animate]';
   const REVEAL_SELECTOR  = '.reveal';
-  const TRIGGER          = 0.5;   // 50% of viewport height
+  const TRIGGER          = 0.5;   
   const REPLAY           = true;
   const prefersReduced   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -23,13 +23,10 @@
       return;
     }
 
-    // Reset first (for replay)
     items.forEach(el => el.classList.remove('active'));
 
-    // Force reflow
     section.offsetWidth;
 
-    // Next frame: add active to all items at once
     requestAnimationFrame(() => {
       items.forEach(el => el.classList.add('active'));
       section._animActive = true;

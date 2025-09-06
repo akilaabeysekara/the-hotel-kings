@@ -39,7 +39,6 @@
   opacity: 0;
 }
 
-/* Prev/Next Buttons */
 .gallery-nav-btn {
   position: absolute;
   top: 50%;
@@ -63,7 +62,6 @@
 .gallery-prev { left: 20px; }
 .gallery-next { right: 20px; }
 
-/* Pagination */
 .gallery-pagination {
   display: flex;
   justify-content: center;

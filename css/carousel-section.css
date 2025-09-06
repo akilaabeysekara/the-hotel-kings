@@ -20,7 +20,6 @@
             filter: brightness(95%);
         }
 
-        /* Gradient overlay */
         #carousel-section .carousel-item::after {
             content: "";
             position: absolute;
@@ -31,7 +30,6 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
 
-        /* Carousel indicators */
         #carousel-section .carousel-indicators [data-bs-target] {
             background-color: #c49b63;
         }

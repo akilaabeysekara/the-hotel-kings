@@ -1,5 +1,4 @@
 
-        /* General Section */
         #room-section {
             font-family: 'Georgia', serif;
             padding: 60px 5%;
@@ -11,7 +10,6 @@
             margin: 15px 0 20px;
         }
 
-        /* Row Layout */
         .room-row {
             display: flex;
             flex-wrap: wrap;
@@ -24,7 +22,6 @@
             flex-direction: row-reverse;
         }
 
-        /* Room Image */
         .room-img {
             margin-top: 30vh;
             flex: 1 1 45%;
@@ -36,7 +33,6 @@
             object-fit: cover;
         }
 
-        /* Room Text */
         .room-text {
             margin-top: 20vh;
             flex: 1 1 50%;
@@ -53,7 +49,6 @@
             line-height: 1.6;
         }
 
-        /* Features */
         .room-features h3 {
             font-size: 1.3rem;
             text-transform: uppercase;

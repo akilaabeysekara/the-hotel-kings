@@ -12,7 +12,7 @@
         @media (max-width: 767.98px) {}
 
         /* // `lg` applies to medium devices (tablets, less than 992px) */
-        @media (max-width: 991.98px) {
+        @media (max-width: 1050px) {
             #logo-container h1 {
                 font-size: 20px !important;
             }
@@ -59,16 +59,87 @@
 
 
         /*-------------------------------------- Room Section Responsive ----------------------- */
-        @media (max-width: 768px) {
-
-            .room-row,
-            .room-row.reverse {
-                flex-direction: column;
-            }
-
-            .room-img,
-            .room-text {
-                flex: 1 1 100%;
-            }
+        @media (max-width: 1800px) {
+             #room-section .room-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 60px; 
         }
-        
+
+        #room-section .room-row.reverse {
+        flex-direction: row-reverse;
+        }
+
+                #room-section .room-text {
+            order: 1;       
+            width: 100%;
+        }
+
+        #room-section .room-img {
+            order: 2;       
+            width: 100%;
+            margin-top: 30px; 
+        }
+        #room-section .room-row,
+        #room-section .room-row.reverse {
+            flex-direction: column; 
+            text-align: left;       
+        }
+
+        }
+
+  
+        /*-------------------------------------- Amenities Section Responsive ----------------------- */
+        @media (max-width: 1800px) {
+        #amenities-section .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        }
+        #amenities-section .row {
+        flex-direction: column;
+        }
+
+        #amenities-section .amenities-text {
+        order: 1;        
+        width: 100%;
+        }
+
+        #amenities-section .amenities-img {
+        order: 2;        
+        width: 100%;
+        margin-top: 30px; 
+         }
+    }
+
+
+        /*-------------------------------------- Experience Section Responsive ----------------------- */
+        @media (max-width: 1800px) {
+        #experience-section .experience-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 60px;
+        }
+
+        #experience-section .experience-row {
+            flex-direction: column;
+        }
+
+        #experience-section .experience-text {
+            order: 1;     
+            width: 100%;
+        }
+
+        #experience-section .experience-img {
+            order: 2;      
+            width: 100%;
+            margin-top: 30px;
+        }
+        }
+
+
+    
